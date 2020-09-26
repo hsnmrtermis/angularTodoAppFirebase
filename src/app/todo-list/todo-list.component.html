@@ -1,0 +1,32 @@
+<div class="row text-center mt-2 border border-danger p-2">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li
+        *ngFor="let todo of allProducts"
+        class="list-group-item d-flex justify-content-between align-items-center"
+        [ngClass]="{ complete: todo.payload.doc.data().isComplete }"
+      >
+        {{ todo.payload.doc.data().name }}
+        <div class="sag">
+          <button
+            (click)="updateComplete(todo)"
+            class="btn btn-success"
+            [hidden]="todo.payload.doc.data().isComplete"
+          >
+            <fa-icon [icon]="checkIcon"></fa-icon>
+          </button>
+          <button
+            (click)="updateComplete(todo)"
+            class="btn deleteBtn"
+            [hidden]="!todo.payload.doc.data().isComplete"
+          >
+            <fa-icon [icon]="timesIcon"></fa-icon>
+          </button>
+          <button (click)="deleteTODO(todo)" class="btn btn-danger">
+            <fa-icon [icon]="trashIcon"></fa-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-468e5": {
+      "hosting": {
+        "angularTodoApp": [
+          "angular-468e5"
+        ]
+      }
+    }
+  }
+}

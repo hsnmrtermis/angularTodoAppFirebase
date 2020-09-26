@@ -1,0 +1,9 @@
+.complete{
+    background-color: #e67e22 ;
+    color: white;
+    text-decoration: line-through;
+}
+.deleteBtn{
+    background-color: #8e44ad;
+    color:white;
+}

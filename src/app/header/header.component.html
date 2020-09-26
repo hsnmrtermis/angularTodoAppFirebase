@@ -1,0 +1,13 @@
+<div class="row border border-danger p-2 mt-2">
+    <div class="col-md-12">
+         <h2 class="bg-primary text-white p-1">
+    Todo App &nbsp;<button *ngIf='!isShow'  (click)='toggleFunction()' class="btn btn-success text-right ml-5">
+      <fa-icon [icon]="plusIcon"></fa-icon>
+    </button>
+    <button (click)='toggleFunction()' *ngIf='isShow'  class="btn btn-danger">
+      <fa-icon [icon]='minusIcon'></fa-icon> 
+    </button>
+  </h2>
+    </div>
+ 
+</div>
